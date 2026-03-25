@@ -1,0 +1,6 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+Prokka_on_dataset_31__gbk	NDNJGFJN_12	80778	81938	+	nheA	1-1161/1161	===============	0/0	100.00	94.92	vfdb	NP_978284	(nheA) non-hemolytic enterotoxin A [Nhe (VF0533)] [Bacillus cereus ATCC 10987]	
+Prokka_on_dataset_31__gbk	NDNJGFJN_12	81970	83178	+	nheB	1-1209/1209	===============	0/0	100.00	95.86	vfdb	NP_978285	(nheB) non-hemolytic enterotoxin B [Nhe (VF0533)] [Bacillus cereus ATCC 10987]	
+Prokka_on_dataset_31__gbk	NDNJGFJN_12	83286	84365	+	nheC	1-1080/1080	===============	0/0	100.00	90.83	vfdb	NP_978286	(nheC) non-hemolytic enterotoxin C [Nhe (VF0533)] [Bacillus cereus ATCC 10987]	
+Prokka_on_dataset_31__gbk	NDNJGFJN_16	52417	54816	-	inhA	1-2400/2400	===============	0/0	100.00	96.71	vfdb	YP_026915	(inhA) immune inhibitor A metalloprotease [InhA (VF0536)] [Bacillus anthracis str. Sterne]	
+Prokka_on_dataset_31__gbk	NDNJGFJN_17	19330	20869	+	BAS3109	1-1539/1539	========/======	1/1	100.00	95.13	vfdb	YP_029366	(BAS3109) thiol-activated cytolysin [ALO (VF0534)] [Bacillus anthracis str. Sterne]	
