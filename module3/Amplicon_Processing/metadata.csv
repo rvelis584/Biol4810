@@ -1,0 +1,11 @@
+﻿SampleID,BirdID,Date,SampleSource,InfectionStatus,HL,WBC,ParasiteLoad,Polychromasia,Sex,Control,Status,Year,Dominant,Subdominant,Plumage
+WCSP01C23,3011-47153,4/1/23,Cloaca,Mixed,0.14942529,5800,0.0006,0.0083,Male,no,Infected,one,Haemoproteus_cyanomitrae,Haemoproteus_fringillae,
+WCSP01F23,3011-47153,4/1/23,Fecal,Mixed,0.14942529,5800,0.0006,0.0083,Male,no,Infected,one,Haemoproteus_cyanomitrae,Haemoproteus_fringillae,
+WCSP03C23,3011-47159,4/7/23,Cloaca,Uninfected,0.2195122,5800,0,0.0067,Female,no,Uninfected,one,,,
+WCSP03F23,3011-47159,4/7/23,Fecal,Uninfected,0.2195122,5800,0,0.0067,Male,no,Uninfected,one,,,
+WCSP04C23,3011-47157,4/7/23,Cloaca,Single,0.14942529,6800,0.0107,0.0127,Male,no,Infected,one,Haemoproteus_fringillae,,
+WCSP04F23,3011-47157,4/7/23,Fecal,Single,0.14942529,6800,0.0107,0.0127,Male,no,Infected,one,Haemoproteus_fringillae,,
+WCSP05C23,3011-47156,4/7/23,Cloaca,Mixed,0.04166667,6200,0.0004,0.0107,Female,no,Infected,one,Haemoproteus_fringillae,Plasmodium_circumflexum,
+WCSP05F23,3011-47156,4/7/23,Fecal,Mixed,0.04166667,6200,0.0004,0.0107,Female,no,Infected,one,Haemoproteus_fringillae,Plasmodium_circumflexum,
+WCSP06C23,3011-47155,4/7/23,Cloaca,Mixed,0.04166667,5000,0.0001,0.0106,Male,no,Infected,one,Haemoproteus_fringillae,Haemoproteus_leiothrichus,
+WCSP06F23,3011-47155,4/7/23,Fecal,Mixed,0.04166667,5000,0.0001,0.0106,Male,no,Infected,one,Haemoproteus_fringillae,Haemoproteus_leiothrichus,
