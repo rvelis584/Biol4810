@@ -2,7 +2,7 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\margl1440\margr1440\vieww21180\viewh11940\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Step 1 : Use Falco\
@@ -59,4 +59,95 @@ Measuring gene expression\
 Tool parameters:\
 On HISAT2 collection aligned reads\
 Gene annotation file: Gff file \
-Input read pairs and count then as one single fragment }
+Input read pairs and count then as one single fragment \
+\
+Step 8 \
+Short reads \
+HISaat 2 on aligned reads \
+Unstranded \
+Use Reference GTF/GFF3 \
+Use a file from history \
+Promicomonospira (reference genome)\
+\
+Step 9 \
+Tool : StringTie merge 2.2.3 \
+Tool Parameters: \
+StringTie on Assembled transcripts \
+On referene gene\
+No other change \
+\
+Step 10 \
+Feature counts \
+Tool parameters \
+Alignment files HISAT string tie merge \
+On off gene annotation file \
+	\
+Transcript underscore id = transcript_id\
+Input has pair reads \
+Count them as a single fragment \
+\
+\
+Step 11 \
+3 replicates that were grown in broth and 3 in plate \
+Under Factor \
+Write growth_media\
+Under 1: Factor level \
+Write broth\
+2: factor level \
+Write plate \
+Under Advanced options \
+Use beta prior \
+Under output options \
+Generate plots \
+Output normalized counts \
+Under hidden files rename the broth and the plates \
+\
+\
+Notes: \
+Null hypothesis for each gene there is no change between broth plates\
+Alternative hypothesis \
+Negative 7 and positive 4 \
+Have to do a statistical test where the change observe is \
+More 0.05= significant change and reject the null hypothesis \
+Three pprepicates for each trial \
+Adjusted p value = interested in any gene that are different in the log 2 column that are significant in the log 2 column \
+Too many files so we will have to filter \
+\
+Under what condition was this highly expressed\
+\
+Step 12 \
+Filter data on any column using simple expression \
+On DESeq \
+c7 < 0.05\
+1453 lines \
+\
+Step 13 filter data on any column using simple expression \
+On previous filter  \
+Filter out from log2 column 3 \
+Write abs(c3)>1\
+Less than the first filter \
+Now it is 1,308 lines\
+\
+Notes on DESeq2  Plots \
+Want to see tighter or cluster points on such as PlateReplicate 1and 2\
+Plate replicate 1 not too cluster with others \
+This is saying that whatever variable is taken into assign is taking 88% \
+\
+Sample to sample distance \
+Replicate of the same and is clustered properly \
+\
+Dispersion estimates : All on the same line which means that it shows accurate results \
+Histogram of p- values for growth media show the p values are significant \
+\
+MA- plot for growth shows the Unregulated and down regulated genes but if they are blue they are statistically significant \
+\
+\
+Concatenate \
+\
+GeneID	BaseMean	Log2(FC)	StdErrr	Wald-Stats	P-value	P-adj\
+\
+\
+Step 14 \
+Tool Concatenate multiple datasets \
+On last filter \
+}
