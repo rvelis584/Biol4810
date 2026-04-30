@@ -2,7 +2,7 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww21180\viewh11940\viewkind0
+\margl1440\margr1440\vieww4700\viewh11940\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Step 1 : Use Falco\
@@ -142,7 +142,7 @@ Histogram of p- values for growth media show the p values are significant \
 MA- plot for growth shows the Unregulated and down regulated genes but if they are blue they are statistically significant \
 \
 \
-Concatenate \
+Concatenate multiple datasets or collections\
 \
 GeneID	BaseMean	Log2(FC)	StdErrr	Wald-Stats	P-value	P-adj\
 \
@@ -150,4 +150,91 @@ GeneID	BaseMean	Log2(FC)	StdErrr	Wald-Stats	P-value	P-adj\
 Step 14 \
 Tool Concatenate multiple datasets \
 On last filter \
+\
+Download differential gene expression broth and plates \
+\
+Step 15\
+Tool : Volcano Plot \
+Parameters: on DifferentialGeneExpression broth and plate \
+Put in the values \
+Column 7, 6,3,1 \
+Run tool \
+\
+Step 16\
+Open Differential Gene Expression Broth and Plates . Tabular \
+You want the top 10 up and down and delete everything in between and save as csv\
+Upload the top and down regulated genes to Galaxy \
+Click on edit on galaxy, datatypes, and convert to datatype should be tabular\
+\
+\
+Step 17\
+Tool: Join Two datasets side by side on a specified field \
+Tool Parameters: \
+On the topped down \
+Column 1 \
+On Normalized\
+Column 1\
+\
+\
+Step 18\
+Cut column from a table \
+\
+Step 19\
+Tool: Heatmap 2\
+Tool Parameters :\
+On the dataset you just cut \
+Under data transformation \
+Log2(value+1) transform my data\
+Under Type colormap to use \
+Under Name of the colormap\
+Pick a color like RdBu \
+Run \
+\
+Darker colors high levels of expression \
+Light colors mean low levels of expression\
+\
+\
+What are the genes doing? \
+\
+\
+Step 20 \
+Tool: Filter data on any column using simple expression \
+Filter on promicromonospora \
+With following conditions\
+c3==\'93CDS\'92\
+\
+Step 21\
+Tool: Cut column from a table \
+Tool parameters: \
+Cut Columns : c9\
+Run \
+\
+Step 22\
+Tool: Convert delimiters to TAB\
+Tool parameter: Delimiters we are working with are semicolons \
+\
+Interested in Column 2 because it has the gene names \
+\
+Step 23\
+Tool : Replace Text in a specific \
+Tool Parameter Replace \
+In column 2 \
+Parent=\
+\
+Step 24\
+Tool: Cut columns from a table \
+Cut columns : c2,c8\
+\
+Step 25\
+Tool: Join two Datasets \
+Parameters: on Cut dataset \
+Column 1 for both datasets \
+2nd file the top and down file \
+Keep the header lines: yes\
+Download this file \
+\
+Why are there less columns: \
+Anything that you don\'92t have annotated will not show up and just the genes that align will \
+\
+\
 }
