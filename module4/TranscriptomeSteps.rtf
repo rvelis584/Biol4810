@@ -2,12 +2,12 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww4700\viewh11940\viewkind0
+\margl1440\margr1440\vieww5740\viewh5840\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Step 1 : Use Falco\
 For sequence quality analysis \
-Galaxy version 1.2.4+galaxy0 \
+Galaxy version 1.3.0 \
 Tool parameters: none \
 \
 Step 2: fastp\
@@ -27,22 +27,26 @@ Step 3: HISAT2\
 Alignment for the reads to a reference genome \
 Version 2.2.2\
 Tool parameter\
-Source for the reference genome : promicormonospora.fasta\
-On Pained end dataset collection \
+History\
+Source for the reference genome : promicormonospora.fna\
+On Paired end dataset collection \
 On fast p on collection -paired end output \
 Do not download anything \
 \
 \
 Turns align reads into full transcripts by taking the short reads\
 Take short reads and figure out which transcript it belongs to or assembling the transcript \
-Step 4: use StringTie\
-Version 2.2.3 \
+\
+Step 4: \
+Tool : use StringTie\
+Galaxy Version 2.2.3 \
 Tool Parameters: short reads \
 On HISAT2 on collection on aligned reads (BAM) \
 \
 Step 5\
-Use StringTie Merge \
-Merge all files of stringTie \
+Tool: Use StringTie Merge \
+Galaxy Version 2.2.3\
+Tool Parameters: Merge all files of stringTie \
 Tool parameters: \
 On dataset collection: String Tie on collection on assembled transcripts \
 \
@@ -51,19 +55,26 @@ GFF compare assembled transcripts to referee annotation \
 Tool: use GffCompare \
 Tool Parameters: \
 On dataset collection stringTie merge and reference genome\
+Do not do this step for section report \
+\
 \
 \
 Step 7 \
 Tool: use featureCounts\
+Galaxy Version 2.2.2\
 Measuring gene expression\
 Tool parameters:\
-On HISAT2 collection aligned reads\
-Gene annotation file: Gff file \
-Input read pairs and count then as one single fragment \
+On HISAT2 collection aligned reads (BAM)\
+Gene annotation file: Gff file ( StringTie merge)\
+Under \'93 Does the input have read pairs?\'94 \
+Select \'93 yes, paired-end and count them as 1 single fragment\'94 \
 \
 Step 8 \
+Tool: Use HISAT2 \
+Galaxy Version 2.2.2\
+Tool Parameters: \
 Short reads \
-HISaat 2 on aligned reads \
+HISAT2 2 on aligned reads \
 Unstranded \
 Use Reference GTF/GFF3 \
 Use a file from history \
